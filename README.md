@@ -17,14 +17,16 @@ A customizable statusline for Claude Code showing prompt snippet, git status, an
 
 ## Installation
 
-### 1. Enable the plugin
+### 1. Clone and enable the plugin
 
 ```bash
-# Option A: Use --plugin-dir flag
-claude --plugin-dir /path/to/claude-statusline
+git clone https://github.com/DustyWalker/claude-statusline.git
+claude --plugin-dir ./claude-statusline
+```
 
-# Option B: Install to your plugins directory
-cp -r claude-statusline ~/.claude/plugins/
+Or install to your plugins directory:
+```bash
+git clone https://github.com/DustyWalker/claude-statusline.git ~/.claude/plugins/claude-statusline
 ```
 
 ### 2. Run setup
