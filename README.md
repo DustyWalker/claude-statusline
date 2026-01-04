@@ -33,7 +33,7 @@ This is a **local plugin** (not a marketplace plugin). Use one of these methods:
 
 3. **Run setup inside Claude Code:**
    ```
-   /claude-statusline:setup
+   /setup
    ```
 
 4. **Restart Claude Code normally:**
@@ -83,9 +83,9 @@ If you prefer using `/plugin install`:
 
 | Command | Description |
 |---------|-------------|
-| `/claude-statusline:setup` | Install the statusline |
-| `/claude-statusline:uninstall` | Remove the statusline |
-| `/claude-statusline:preview` | Preview without installing |
+| `/setup` | Install the statusline |
+| `/uninstall` | Remove the statusline |
+| `/preview` | Preview without installing |
 
 ## How It Works
 
@@ -122,7 +122,7 @@ const BLUE = '\x1b[34m';
 ## Uninstallation
 
 ```
-/claude-statusline:uninstall
+/uninstall
 ```
 
 This removes all configuration from `settings.json` and deletes the state directory.
@@ -134,9 +134,9 @@ claude-statusline/
 ├── .claude-plugin/
 │   └── plugin.json        # Plugin manifest
 ├── commands/
-│   ├── setup.md           # /claude-statusline:setup
-│   ├── uninstall.md       # /claude-statusline:uninstall
-│   └── preview.md         # /claude-statusline:preview
+│   ├── setup.md           # /setup
+│   ├── uninstall.md       # /uninstall
+│   └── preview.md         # /preview
 ├── hooks/
 │   └── hooks.json         # SessionStart + UserPromptSubmit hooks
 ├── scripts/
