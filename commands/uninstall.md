@@ -19,7 +19,7 @@ The uninstall script will:
 Run the uninstall script using Node.js:
 
 ```bash
-node "$PLUGIN_DIR/scripts/uninstall.mjs"
+node "${CLAUDE_PLUGIN_ROOT}/scripts/uninstall.mjs"
 ```
 
 After running, inform the user:

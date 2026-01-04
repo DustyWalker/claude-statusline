@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$PLUGIN_DIR/scripts/clear-state.mjs\""
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/clear-state.mjs\""
           }
         ]
       }
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$PLUGIN_DIR/scripts/save-prompt.mjs\""
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/save-prompt.mjs\""
           }
         ]
       }

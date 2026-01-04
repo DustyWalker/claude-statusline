@@ -91,6 +91,28 @@ const BLUE = '\x1b[34m';
 
 This removes all configuration from `settings.json` and deletes the state directory.
 
+## Plugin Structure
+
+```
+claude-statusline/
+├── .claude-plugin/
+│   └── plugin.json        # Plugin manifest
+├── commands/
+│   ├── setup.md           # /claude-statusline:setup
+│   ├── uninstall.md       # /claude-statusline:uninstall
+│   └── preview.md         # /claude-statusline:preview
+├── hooks/
+│   └── hooks.json         # SessionStart + UserPromptSubmit hooks
+├── scripts/
+│   ├── statusline.mjs     # Main statusline renderer
+│   ├── setup.mjs          # Auto-configure settings.json
+│   ├── uninstall.mjs      # Remove configuration
+│   ├── save-prompt.mjs    # Capture prompts (hook)
+│   └── clear-state.mjs    # Clear state (hook)
+├── README.md
+└── .gitignore
+```
+
 ## Requirements
 
 - Node.js (required for Claude Code)

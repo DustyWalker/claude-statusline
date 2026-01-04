@@ -16,7 +16,7 @@ This runs the statusline script with sample data to demonstrate the output forma
 Run this command to show a preview:
 
 ```bash
-echo '{"model":{"display_name":"Claude Opus 4.5"},"workspace":{"current_dir":"'"$(pwd)"'"}}' | node "$PLUGIN_DIR/scripts/statusline.mjs"
+echo '{"model":{"display_name":"Claude Opus 4.5"},"workspace":{"current_dir":"'"$(pwd)"'"}}' | node "${CLAUDE_PLUGIN_ROOT}/scripts/statusline.mjs"
 ```
 
 Explain to the user what each segment shows:

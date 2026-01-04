@@ -20,7 +20,7 @@ The setup script will:
 Run the setup script using Node.js:
 
 ```bash
-node "$PLUGIN_DIR/scripts/setup.mjs"
+node "${CLAUDE_PLUGIN_ROOT}/scripts/setup.mjs"
 ```
 
 After running, inform the user:
