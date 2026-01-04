@@ -17,31 +17,67 @@ A customizable statusline for Claude Code showing prompt snippet, git status, an
 
 ## Installation
 
-### 1. Clone and enable the plugin
+This is a **local plugin** (not a marketplace plugin). Use one of these methods:
 
-```bash
-git clone https://github.com/DustyWalker/claude-statusline.git
-claude --plugin-dir ./claude-statusline
-```
+### Method A: Using --plugin-dir (Recommended)
 
-Or install to your plugins directory:
-```bash
-git clone https://github.com/DustyWalker/claude-statusline.git ~/.claude/plugins/claude-statusline
-```
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/DustyWalker/claude-statusline.git ~/.claude/plugins/claude-statusline
+   ```
 
-### 2. Run setup
+2. **Start Claude Code with the plugin:**
+   ```bash
+   claude --plugin-dir ~/.claude/plugins/claude-statusline
+   ```
 
-Once the plugin is enabled, run:
+3. **Run setup inside Claude Code:**
+   ```
+   /claude-statusline:setup
+   ```
 
-```
-/claude-statusline:setup
-```
+4. **Restart Claude Code normally:**
+   ```bash
+   claude
+   ```
 
-This automatically configures your `~/.claude/settings.json`.
+The statusline will appear after restart.
 
-### 3. Restart Claude Code
+### Method B: Using a Local Marketplace
 
-The statusline will appear after restarting.
+If you prefer using `/plugin install`:
+
+1. **Create a local marketplace:**
+   ```bash
+   mkdir -p ~/claude-marketplaces/dustywalker/.claude-plugin
+
+   cat > ~/claude-marketplaces/dustywalker/.claude-plugin/marketplace.json <<'JSON'
+   {
+     "name": "dustywalker",
+     "owner": { "name": "DustyWalker" },
+     "plugins": [
+       {
+         "name": "claude-statusline",
+         "source": { "source": "github", "repo": "DustyWalker/claude-statusline" },
+         "description": "Statusline showing prompt, git status, and model"
+       }
+     ]
+   }
+   JSON
+   ```
+
+2. **In Claude Code:**
+   ```
+   /plugin marketplace add ~/claude-marketplaces/dustywalker
+   /plugin install claude-statusline@dustywalker
+   ```
+
+3. **Restart Claude Code.**
+
+### Troubleshooting
+
+- **Command not found?** Requires Claude Code >= 1.0.33
+- **Plugin not appearing?** Clear cache: `rm -rf ~/.claude/plugins/cache`
 
 ## Commands
 
