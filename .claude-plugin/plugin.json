@@ -1,0 +1,9 @@
+{
+  "name": "claude-statusline",
+  "version": "0.1.0",
+  "description": "Customizable statusline showing prompt snippet, git status, and model name. Cross-platform (macOS, Windows, Linux).",
+  "author": {
+    "name": "desktop"
+  },
+  "keywords": ["statusline", "git", "prompt", "status"]
+}
